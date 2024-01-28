@@ -15,15 +15,15 @@ const sendOtp = async (req, res) => {
         let config = {
             service: "gmail",
             auth: {
-              user: "creationz3rdeye@gmail.com",
-              pass: "rockhard@333",
+              user: "issacsamalex@gmail.com",
+              pass: "rduqtttcjofvygys",
             },
           };
         
         const trasnporter = nodemailer.createTransport(config)
 
         const mailOptions = {
-            from: 'creationz3rdeye@gmail.com',
+            from: 'issacsamalex@gmail.com',
             to: email,
             subject: 'Your OTP for verification',
             text: `Your OTP is ${otp}`
