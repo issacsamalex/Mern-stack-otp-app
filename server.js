@@ -39,7 +39,12 @@ app.use('/api/user', otpRoute);
 
 
 
-
+app.use(express.static(path.join(__dirname, './client/otp-app/build')));
+app.get('*', function (_, res){
+    res.sendFile(path.join(__dirname, './client/otp-app/build/index.html'), function(error){
+        res.status(500).send(error);
+    })
+})
 
 
 
